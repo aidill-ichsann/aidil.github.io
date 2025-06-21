@@ -131,6 +131,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-left: 200px;
+    z-index: -1;
 }
 .rigth img{
     box-shadow: 0 10px 30px rgba(60, 64, 67, 0.247),0 4px 12px rgba(60, 64, 67, 0.199);
