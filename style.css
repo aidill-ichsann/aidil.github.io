@@ -369,6 +369,7 @@ font-size: 14px;
     .menu.active{
         position: absolute;
         right: 10px;
+        z-index: 13;
     }
     .menu i{
         font-size: 24px;
