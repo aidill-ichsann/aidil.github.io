@@ -141,9 +141,10 @@
             >
           </div>
         </div>
-          <div class="email">
+          <form class="email">
             <div class="input" data-aos="zoom-in-left">
               <input type="text" name="" id="name" placeholder="name" />
+              <input type="text" name="" id="title" placeholder="title" />
               <input type="text" name="" id="email" placeholder="email" />
             </div>
             <div class="massage" data-aos="zoom-in-left">
@@ -153,8 +154,8 @@
                 placeholder="your massage"
               ></textarea>
             </div>
-            <button data-aos="zoom-in-left" class="send">send <i class="bx bx-send"></i></button>
-          </div>
+            <button type="submit" data-aos="zoom-in-left" class="send">send <i class="bx bx-send"></i></button>
+          </form>
       </div>
     </div>
 
@@ -186,6 +187,13 @@
     </footer>
 <!-- Tambahkan library AOS dulu -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+  (function(){
+    emailjs.init("aidil_gmail"); // Ganti dengan user ID dari EmailJS
+  })();
+</script>
 
     <script src="script.js"></script>
   </body>

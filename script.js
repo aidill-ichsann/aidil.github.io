@@ -17,3 +17,33 @@ menu.addEventListener("click", () => {
   download.classList.toggle("active");
   menu.classList.toggle("active");
 });
+
+// kirim email
+  // Inisialisasi SDK v4
+  emailjs.init({
+    publicKey: "2twEVVnK_O1T9FCAh", // Ganti dari dashboard EmailJS kamu
+  });
+
+  // Event form submit
+  document.querySelector(".email").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      name: document.getElementById("name").value,
+      title: document.getElementById("title").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("massage").value,
+    };
+
+    emailjs
+      .send("service_wzbmd7l", "template_df4nz9e", templateParams)
+      .then(() => {
+        alert("✅ Pesan berhasil dikirim!");
+        document.querySelector(".email").reset();
+      })
+      .catch((error) => {
+        alert("❌ Gagal mengirim pesan.");
+        console.error("EmailJS Error:", error);
+      });
+  });
+
